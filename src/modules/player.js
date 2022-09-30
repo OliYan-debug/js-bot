@@ -58,6 +58,9 @@ const botPlayer = {
               " digite `!pause` ou `!stop` para aplicar comandos"
           );
         }
+      }}
+      else {
+        message.reply("Você tem que entrar em um **canal de áudio** primeiro");
       }
       if (command === "pause") {
         player.pause();
@@ -72,9 +75,7 @@ const botPlayer = {
         conn.destroy();
         message.reply("Fim da festa!");
       }
-    } else {
-      message.reply("Você tem que entrar em um **canal de áudio** primeiro");
-    }
+
   },
 };
 module.exports = botPlayer;
