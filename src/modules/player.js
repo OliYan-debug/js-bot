@@ -59,7 +59,7 @@ const botPlayer = {
           );
         }
       }}
-      else {
+      else if(!conn){
         message.reply("Você tem que entrar em um **canal de áudio** primeiro");
       }
       if (command === "pause") {
@@ -72,7 +72,6 @@ const botPlayer = {
       }
       if (command === "stop") {
         player.stop();
-        conn.destroy();
         message.reply("Fim da festa!");
       }
 
