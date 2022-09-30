@@ -38,7 +38,7 @@ const botPlayer = {
 
     if (command === "play") {
       const conn = joinChannel(message);
-      if (con) {
+      if (conn) {
         const vidFind = async (query) => {
           const vidRes = await ytSearch(query);
           return vidRes.videos.length > 1 ? vidRes.videos[0] : null;
