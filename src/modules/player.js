@@ -58,23 +58,23 @@ const botPlayer = {
               " digite `!pause` ou `!stop` para aplicar comandos"
           );
         }
-      }}
-      else if(!conn){
+      } else {
         message.reply("Você tem que entrar em um **canal de áudio** primeiro");
       }
-      if (command === "pause") {
-        player.pause();
-        message.reply("Música pausada digite `!unpause` para continuar");
-      }
-      if (command === "unpause") {
-        player.unpause();
-        message.reply("A festa continua");
-      }
-      if (command === "stop") {
-        player.stop();
-        message.reply("Fim da festa!");
-      }
+    }
 
+    if (command === "pause") {
+      player.pause();
+      message.reply("Música pausada digite `!unpause` para continuar");
+    }
+    if (command === "unpause") {
+      player.unpause();
+      message.reply("A festa continua");
+    }
+    if (command === "stop") {
+      player.stop();
+      message.reply("Fim da festa!");
+    }
   },
 };
 module.exports = botPlayer;
