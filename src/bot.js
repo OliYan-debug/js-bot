@@ -28,3 +28,17 @@ client.on("ready", () => {
 });
 
 client.login(TOKEN);
+
+
+
+// simple trick for the bot works 24/7
+
+const express = require("express");
+const app = express();
+const port = 2001
+app.get("/", (req, res) => {
+  res.send("All Working")
+})
+app.listen(port, ()=>{
+  console.log(`Server running on port ${port} `)
+})
